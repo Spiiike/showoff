@@ -41,3 +41,8 @@ resource "okta_app_bookmark" "internal_portal" {
   label = "Freedom Fighters"
   url   = "https://glasscliff.online"
 }
+
+resource "okta_app_group_assignment" "app_group_assignment" {
+    app_id = okta_app_bookmark.internal_portal.id
+    group_id = okta_group.exhibit_a.id
+}
