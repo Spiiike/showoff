@@ -36,3 +36,8 @@ resource "okta_group_memberships" "group_a_membership" {
     okta_user.user_a.id
   ]
 }
+
+resource "okta_app_bookmark" "internal_portal" {
+  label = "Freedom Fighters"
+  url   = "https://glasscliff.online"
+}
